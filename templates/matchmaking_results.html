@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Matchmaking</title>
+</head>
+<body>
+    <h1>Jogadores Emparelhados</h1>
+    {% if matches %}
+        <ul>
+            {% for match in matches %}
+                <li>{{ match.0 }} vs {{ match.1 }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Nenhum match encontrado.</p>
+    {% endif %}
+</body>
+</html>

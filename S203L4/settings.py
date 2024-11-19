@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'recomendacao.apps.RecomendacaoConfig',
+    'rest_framework',
         
 ]
 
