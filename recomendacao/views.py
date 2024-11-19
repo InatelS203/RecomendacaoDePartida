@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
-from .models import player
+from .models import Player
 from .services.matchmaking import matchmaking
 from .services import jsonToPlayer
 
@@ -16,7 +16,7 @@ def matchmaking_api(request):
             jsonToPlayer(json_data)  # Função que você já criou para processar o JSON
 
             # Obter todos os jogadores que estão esperando por uma partida
-            jogadores = player.objects.all()
+            jogadores = Player.objects.all()
 
             if jogadores.exists():
                 # Chamar o matchmaking
